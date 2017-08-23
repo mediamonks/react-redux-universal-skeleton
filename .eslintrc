@@ -1,0 +1,62 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "import",
+    "react",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./build-tools/config/webpack/webpack.config.resolve.js"
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/no-unused-prop-types": ["error", {
+      "skipShapeProps": true
+    }],
+    "linebreak-style": 0,
+    "react/forbid-prop-types": 0,
+    "no-use-before-define": 0,
+    "no-empty-pattern": 0,
+    "no-unused-expressions": ["error", {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }],
+    "class-methods-use-this": ["error", {
+      "exceptMethods": [
+        "getChildContext",
+        "componentDidMount",
+        "componentWillMount",
+        "componentWillUnmount",
+        "componentWillReceiveProps",
+        "shouldComponentUpdate",
+        "componentWillUpdate",
+        "componentDidUpdate",
+        "render"
+      ]
+    }],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/test/**/*.js", "**/stories/**/*.jsx"]
+    }],
+    "no-plusplus": ["error", {
+      "allowForLoopAfterthoughts": true
+    }],
+    "import/no-webpack-loader-syntax": 0,
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "trailingComma": "all", "printWidth": 100 }
+    ]
+  }
+}

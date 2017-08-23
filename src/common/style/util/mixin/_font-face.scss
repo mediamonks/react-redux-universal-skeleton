@@ -1,0 +1,17 @@
+/**
+ * Font Face
+ *
+ * @param {string} $fontName - Name of the font
+ * @param {string} $folderName - Subfolder inside the fonts folder
+ * @param {string} $fileName - Name of the font-file
+ * @param {string} $fontWeight (normal) - Font weight value
+ * @param {string} $fontStyle (normal) - Font style value
+ */
+@mixin font-face($name, $folder, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('../../client/fonts/#{$folder}/#{$file}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

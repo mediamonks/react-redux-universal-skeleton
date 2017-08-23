@@ -1,0 +1,25 @@
+.fade-animation {
+  position: relative;
+
+  .fade-animation-enter {
+    opacity: 0;
+
+    &.fade-animation-enter-active {
+      opacity: 1;
+      transition: opacity 100ms linear 200ms;
+    }
+  }
+
+  .fade-animation-leave {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &.fade-animation-leave-active {
+      opacity: 0;
+      position: absolute;
+      transition: opacity 100ms linear;
+    }
+  }
+}

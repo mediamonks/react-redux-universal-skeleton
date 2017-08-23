@@ -1,0 +1,61 @@
+files:
+  include: '**/src/**/*.scss'
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  class-name-format:
+    - 2
+    - convention: hyphenatedlowercase
+  clean-import-paths:
+    - 2
+    - filename-extension: false
+      leading-underscore: false
+  extends-before-declarations: 0
+  extends-before-mixins: 0
+  final-newline: 2
+  function-name-format:
+    - 2
+    - allow-leading-underscore: true
+      convention: hyphenatedlowercase
+  id-name-format:
+    - 2
+    - convention: hyphenatedlowercase
+  indentation:
+    - 2
+    - size: 'tab'
+  leading-zero:
+    - 2
+    - include: false
+  mixin-name-format:
+    - 2
+    - allow-leading-underscore: true
+      convention: hyphenatedlowercase
+  mixins-before-declarations: 0
+  nesting-depth:
+    - 2
+    - max-depth: 7
+  no-color-literals: 0
+  no-css-comments: 0
+  no-misspelled-properties:
+    - 2
+    - extra-properties:
+        - '*zoom'
+        - will-change
+  no-trailing-zero: 2
+  no-transition-all: 2
+  placeholder-name-format:
+    - 2
+    - convention: hyphenatedlowercase
+  property-sort-order: 0
+  quotes:
+    - 2
+    - style: single
+  variable-for-property:
+    - 2
+    - properties:
+        - font-family
+  variable-name-format:
+    - 2
+    - allow-leading-underscore: true
+      convention: camelcase

@@ -1,0 +1,26 @@
+<section class="tutorial-section">
+
+<header>
+    <h2><?js= header ?></h2>
+</header>
+
+<article>
+    <?js= content ?>
+</article>
+
+<nav class="child-pages-nav">
+    <?js if (children.length > 0) { ?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Child pages</h3>
+      </div>
+	    <ul class="list-group"><?js
+	        var self = this;
+	        children.forEach(function(t) { ?>
+	        <li class="list-group-item"><?js= self.tutoriallink(t.name) ?></li>
+	    <?js }); ?></ul>
+	</div>
+    <?js } ?>
+</nav>
+
+</section>

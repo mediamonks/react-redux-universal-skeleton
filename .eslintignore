@@ -1,0 +1,15 @@
+build/**
+build-tools/**
+
+*.configdefinitions.js
+*-compiled.map
+*-compiled.js
+
+node_modules/**
+
+**/static/assets/**
+**/static/public-root/**
+
+**/*.backup.js
+
+docs/**

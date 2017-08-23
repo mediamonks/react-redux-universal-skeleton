@@ -1,0 +1,26 @@
+.icon {
+  display: inline-block;
+
+  &:not(.use-own-color) {
+    svg {
+      color: currentColor;
+      fill: currentColor;
+      stroke: transparent;
+    }
+
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+.svg-icon {
+  display: block;
+}
+
+// Click events are swallowed by <use> element in Edge
+svg {
+  use {
+    pointer-events: none;
+  }
+}

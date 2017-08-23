@@ -1,0 +1,52 @@
+<?js
+var self = this;
+?>
+
+<div class="overview">
+<?js categories.forEach(function(category) { ?>
+
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <h2 id="category:<?js= category.id ?>" class="panel-title text-center" style="font-size: 25px;"><?js= category.title ?></h2>
+  </div>
+  <div class="panel-body">
+  <p class="lead">
+    <?js= category.description ?>
+  </p>
+
+  <?js if (category.tutorials && category.tutorials.length) { ?>
+    <h3 id="category:<?js= category.id ?>:tutorials" class="no-toc">Tutorials</h3>
+
+    <ul class="list-unstyled">
+	<?js (category.tutorials || []).forEach(function(tutorial) { ?>
+	  <li><h4 class="no-toc"><?js= self.tutoriallink(tutorial) ?></h4></li>
+	<?js }) ?>
+	</ul>
+  <?js } ?>
+
+  <h3 id="category:<?js= category.id ?>:api" class="no-toc">API docs</h3>
+  <?js Object.keys(category.members).forEach(function(docKind) { ?>
+    <?js if (category.members[docKind].length) { ?>
+    <h4 id="category:<?js= category.id ?>:<?js= docKind ?>" class="no-toc">
+      <?js= docKind[0].toUpperCase() ?><?js= docKind.slice(1) ?>
+    </h4>
+
+    <dl class="dl-horizontal">
+	<?js
+	category.members[docKind].forEach(function(doclet) {
+	  var nameSegments = doclet.name.split('/');
+	  var shortname = (nameSegments[nameSegments.length - 1] === 'index') ?
+	    nameSegments[nameSegments.length - 2] : nameSegments[nameSegments.length - 1];
+	?>
+	    <dt><?js= self.linkto(doclet.longname, shortname) ?></dt>
+	    <dd><?js= doclet.description ?></dd>
+	<?js }) ?>
+	</dl>
+    <?js } ?>
+  <?js }) ?>
+
+  </div>
+  </div>
+
+<?js }) ?>
+</div>

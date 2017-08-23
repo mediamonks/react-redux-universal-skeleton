@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": 3000,
+    "useRaven": false,
+    "maxAge": 0
+  },
+  "client": {
+    "useRaven": false
+  },
+  "redux": {
+    "persistKeys": [],
+    "useRavenMiddleware": false
+  }
+}

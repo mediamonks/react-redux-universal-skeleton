@@ -1,0 +1,39 @@
+{
+	"plugins": [
+		"../node_modules/jsdoc-babel",
+		"../node_modules/jsdoc/plugins/markdown",
+		"./plugins/category"
+	],
+	"babel": {
+		"presets": ["react"],
+		"plugins": [
+			"transform-class-properties",
+			"transform-object-rest-spread"
+		]
+	},
+	"tags": {
+		"allowUnknownTags": true
+	},
+	"templates": {
+		"logoFile": "",
+		"cleverLinks": true,
+		"monospaceLinks": false,
+		"dateFormat": "YYYY-MM-DD",
+		"outputSourceFiles": true,
+		"outputSourcePath": true,
+		"systemName ": "MediaMonks",
+		"includeDate": false,
+		"footer": "",
+		"copyright": "Copyright © 2017 MediaMonks",
+		"navType": "inline",
+		"theme": "simplex",
+		"linenums": true,
+		"sort": false,
+		"collapseSymbols": false,
+		"inverseNav": false,
+		"methodHeadingReturns": false
+	},
+	"markdown": {
+		"parser": "gfm"
+	}
+}

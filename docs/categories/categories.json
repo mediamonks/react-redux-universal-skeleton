@@ -1,0 +1,43 @@
+{
+  "api-calls": {
+    "title": "API Calls",
+    "description": "Creating API requests and processing their data",
+    "tutorials": ["page-initialization"],
+    "order": 1
+  },
+  "templating": {
+    "title": "Templating",
+    "description": "Utilities for creating and styling components",
+    "tutorials": ["enhanced-redux-form"],
+    "order": 0
+  },
+  "forms": {
+    "title": "Forms and Validation",
+    "description": "Creating forms and validating user input",
+    "tutorials": [
+      "enhanced-redux-form",
+      "enhanced-redux-form-differences",
+      "enhanced-redux-form-validation",
+      "enhanced-redux-form-wizard",
+      "enhanced-redux-form-value-provider",
+      "enhanced-redux-form-composite-inputs"
+    ],
+    "order": 2
+  },
+  "routing": {
+    "title": "Routing",
+    "description": "Configuring routes and redirects",
+    "tutorials": ["enhanced-redux-form"],
+    "order": 3
+  },
+  "tracking": {
+    "title": "Tracking and feedback",
+    "description": "Tracking events and capturing user feedback",
+    "order": 5
+  },
+  "browsers": {
+    "title": "Browser compatibility",
+    "description": "Managing those browser quirks",
+    "order": 6
+  }
+}

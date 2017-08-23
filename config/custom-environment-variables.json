@@ -1,0 +1,15 @@
+{
+  "api": {
+    "host": "API_HOST"
+  },
+  "raven": {
+      "stateKeysToCapture": "RAVEN_STATE_KEYS_TO_CAPTURE",
+      "nodejs": {
+          "dsn": "RAVEN_NODEJS_DSN"
+      },
+      "client": {
+          "dsn": "RAVEN_CLIENT_DSN",
+          "whitelistUrls": "RAVEN_CLIENT_WHITELIST_URLS"
+      }
+  }
+}

@@ -1,0 +1,14 @@
+// Fonts
+
+// Z-Index
+$zLayout: default, selectBoxOpen, header, filters;
+
+// Media queries
+$mediaQueries: (
+  X_SMALL: (max-width: 479px),
+  SMALL: (min-width: 480px),
+  MEDIUM: (min-width: 768px),
+  LARGE: (min-width: 1025px),
+  X_LARGE: (min-width: 1280px),
+  XX_LARGE: (min-width: 1700px)
+);

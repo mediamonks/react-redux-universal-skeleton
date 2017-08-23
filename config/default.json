@@ -1,0 +1,24 @@
+{
+	"_strip_": [
+		"raven.nodejs"
+	],
+	"api": {
+		"host": "",
+		"path": ""
+	},
+	"raven": {
+		"stateKeysToCapture": "",
+		"nodejs": {
+			"dsn": ""
+		},
+		"client": {
+			"dsn": "",
+			"whitelistUrls": ""
+		}
+	},
+  "meta": {
+    "title": "React skeleton",
+    "description": "React skeleton",
+    "keywords": "React skeleton"
+  }
+}
