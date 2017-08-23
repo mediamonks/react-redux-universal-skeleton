@@ -1,4 +1,4 @@
-# React Skeleton
+# React Redux Universal Skeleton
 
 Welcome to the React / Redux Skeleton
 
