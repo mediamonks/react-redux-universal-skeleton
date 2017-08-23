@@ -1,6 +1,6 @@
 # React Redux Universal Skeleton
 
-Welcome to the React / Redux Skeleton
+Welcome to the React Redux Universal Skeleton
 
 ## How do I get set up?
 
@@ -43,7 +43,7 @@ the documentation.
 
 ## Linting
 
-Please make sure you have `sass lint` and `eslint` and `tslint` installed for your IDE / editor.
+Please make sure you have `sass-lint` and `eslint` and `tslint` installed for your IDE / editor.
 
 ## Style guides
 
@@ -58,10 +58,10 @@ Follow install instructions for [scss-lint](https://github.com/brigade/scss-lint
 npm run lint # runs them all
 npm run lint:js # uses eslint
 npm run lint:ts # uses tslint
-npm run lint:css # uses scss-lint
+npm run lint:css # uses sass-lint
 ```
 
-You can configure WebStorm to use `eslint`, `tslint` and `scss-lint` (through a plugin),
+You can configure WebStorm to use `eslint`, `tslint` and `sass-lint` (through a plugin),
 so your IDE will also show the warnings.
 
 ## Git Hooks
