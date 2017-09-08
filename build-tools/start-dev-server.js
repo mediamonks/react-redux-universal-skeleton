@@ -5,8 +5,6 @@
  *
  * Please note: This file is not parsed through webpack but directly executed by Node.JS
  */
-const path = require('path');
-
 const WebpackDevCompiler = require('./webpack-dev-compiler');
 const webOptions = require('.//config/buildoptions/web-dev.buildoptions');
 const nodeOptions = require('.//config/buildoptions/node-dev.buildoptions');
