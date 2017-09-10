@@ -6,6 +6,10 @@
 		"host": "",
 		"path": ""
 	},
+  "cookie": {
+    "signSecret": "",
+    "encryptSecret": ""
+  },
 	"raven": {
 		"stateKeysToCapture": "",
 		"nodejs": {

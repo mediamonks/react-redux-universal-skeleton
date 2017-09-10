@@ -1,5 +1,9 @@
 {
   "web": {
     "host": "https://www.mediamonks.com"
+  },
+  "cookie": {
+    "signSecret": "0E224E8325915FCFF266CC6EB13708AE",
+    "encryptSecret": "89963CE167DF2325C6D733B0E00D181D1111736AC6745584DFFD07D0C758A82B"
   }
 }

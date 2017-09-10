@@ -163,6 +163,7 @@
     "camelcase": "3.0.0",
     "classnames": "^2.2.5",
     "config": "1.26.1",
+    "cookie-parser": "^1.4.3",
     "dashify": "^0.2.2",
     "debug": "2.6.8",
     "es6-promise": "4.1.1",

@@ -13,7 +13,7 @@ import { enableDebugBreadcrumb } from 'src/common/util/raven/debug-breadcrumb';
 
 import hotPageRenderer from 'hot-callback-loader?export=default!./PageRenderer';
 import 'expose-loader?fetch!imports-loader?this=>global!exports-loader?global.fetch!isomorphic-fetch';
-
+import cookieParser from 'cookie-parser';
 import headersRoute from './routes/headers';
 import serverConfig from './server.configdefinitions';
 
@@ -166,6 +166,11 @@ class ReactServer {
    * Initializes the default routes and middleware for the server. Should only be called once.
    */
   initMiddleware() {
+    const cookieConfig = environmentConfig.get('cookie');
+
+    // eslint-disable-next-line no-underscore-dangle
+    this.app.use(cookieParser(cookieConfig.signSecret));
+
     this.setupHTTPSHeader();
 
     if (process.env.NODE_ENV !== 'production') {
