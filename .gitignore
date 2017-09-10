@@ -15,7 +15,7 @@ coverage
 .vscode/settings.json
 
 build
-tools/webpack-dev-compiler/dll-bundles
+build-tools/webpack-dev-compiler/dll-bundles
 
 docs/output
 docs/storybook
