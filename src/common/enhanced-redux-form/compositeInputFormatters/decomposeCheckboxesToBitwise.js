@@ -17,8 +17,8 @@ const decomposeCheckboxesToBitwise = (bitwise, currentValues = {}) => {
     newValues[key] = null;
   });
 
+  // eslint-disable-next-line no-bitwise
   for (let i = 0; 1 << i <= bitwiseNumber; i++) {
-    // eslint-disable-line no-bitwise
     newValues[i] = (1 << i) & bitwiseNumber ? true : null; // eslint-disable-line no-bitwise
   }
 

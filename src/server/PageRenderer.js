@@ -38,8 +38,8 @@ const getComponentForRoute = (nextState, route) => {
   }
   const getComponent = route.getComponent;
   if (getComponent) {
+    // eslint-disable-next-line consistent-return
     return new Promise(resolve => {
-      // eslint-disable-line consistent-return
       const componentReturn = getComponent.call(route, nextState, (err, component) => {
         resolve(component);
       });

@@ -302,7 +302,7 @@ class ReactServer {
    */
   stop() {
     if (!this.running) {
-      this.debug('Attempting to call stop() on a ReactServer instance that is' + ' not running');
+      this.debug('Attempting to call stop() on a ReactServer instance that is not running');
       return;
     }
     this.close();

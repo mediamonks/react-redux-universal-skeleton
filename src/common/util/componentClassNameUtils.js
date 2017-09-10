@@ -402,8 +402,8 @@ const meetsStringCondition = (condition, componentInstance) => {
     condition = condition.substring(1); // eslint-disable-line no-param-reassign
   }
 
+  // eslint-disable-next-line no-param-reassign
   condition = condition.replace(/!?=/, equals => {
-    // eslint-disable-line no-param-reassign
     debug('Syntax state=prop is deprecated. Use state.prop instead.');
     if (equals === '!=') {
       invert = !invert;
