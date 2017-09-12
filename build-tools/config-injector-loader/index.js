@@ -34,9 +34,9 @@ module.exports = function(content) {
     if (typeof configId === 'undefined') {
       done(
         new Error(
-          'Config definitions file is missing an id property. \n(at ' + resolvedResourcePath + ')',
+          'Config definitions file is missing an id property. \n(at ' + resolvedResourcePath + ')'
         ),
-        null,
+        null
       );
       return;
     }
@@ -49,9 +49,9 @@ module.exports = function(content) {
             configId +
             '". \n(at ' +
             resolvedResourcePath +
-            ')',
+            ')'
         ),
-        null,
+        null
       );
       return;
     }
@@ -85,7 +85,7 @@ function validateConfiguration(configDefinition, targetConfigValues, path) {
         throw new Error(
           'Unknown type found in .configdefinitions file. Expected a function or an object for "' +
             subPath +
-            '"',
+            '"'
         );
       }
 
@@ -100,7 +100,7 @@ function validateConfiguration(configDefinition, targetConfigValues, path) {
         throw new Error(
           'Configuration value with key "' +
             subPath +
-            '" does not validate against the validation function in .configdefinitions file.',
+            '" does not validate against the validation function in .configdefinitions file.'
         );
       }
     }

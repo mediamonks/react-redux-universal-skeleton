@@ -35,7 +35,7 @@
     "postcommit": "git reset"
   },
   "lint-staged": {
-    "*.{js,jsx,scss,ts}": [
+    "{src,stories,test}/**/*.{js,jsx,scss,ts}": [
       "prettier --write --print-width 100 --single-quote --trailing-comma all",
       "git add"
     ],

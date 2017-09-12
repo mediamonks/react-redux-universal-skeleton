@@ -24,7 +24,7 @@ class BuildOptionsManager {
 
   forbidOptionCombination(optionMap, errorMessage) {
     const hasCombination = Object.keys(optionMap).every(
-      optionKey => this.getValue(optionKey) == optionMap[optionKey],
+      optionKey => this.getValue(optionKey) == optionMap[optionKey]
     );
 
     if (hasCombination) {

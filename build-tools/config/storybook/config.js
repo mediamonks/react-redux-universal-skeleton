@@ -20,7 +20,7 @@ addDecorator(story =>
     <DeviceStateProvider>
       {story()}
     </DeviceStateProvider>
-  </Provider>,
+  </Provider>
 );
 
 setAddon(infoAddon);

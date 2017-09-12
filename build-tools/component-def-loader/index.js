@@ -20,10 +20,7 @@ module.exports = function(content) {
   if (hasComponentDef) {
     nameMatch = this.resourcePath.match(/[\/\\]([0-9]*[A-Z][^\\/\-]+)[\/\\]\1\.jsx?$/);
     if (!nameMatch) {
-      throw new Error(
-        genericErrorMessage +
-          'did not follow the filename convention ComponentName/ComponentName.js',
-      );
+      throw new Error(genericErrorMessage + 'did not follow the filename convention ComponentName/ComponentName.js');
     }
   }
 

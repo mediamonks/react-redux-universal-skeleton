@@ -17,7 +17,7 @@ const createOutputConfig = buildOption => {
         publicPath: buildOption('public-web-root') + buildOption('assets-dirname') + '/',
       },
       isTargetNode ? { libraryTarget: 'commonjs2' } : {},
-      buildOption('include-path-info') ? { pathinfo: true } : {},
+      buildOption('include-path-info') ? { pathinfo: true } : {}
     ),
   };
 };

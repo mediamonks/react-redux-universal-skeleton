@@ -28,7 +28,7 @@ const createPluginsConfig = buildOption => {
             path: path.join(
               buildOption('build-path'),
               buildOption('node-output-dirname'),
-              buildOption('asset-manifest-dirname') + '/',
+              buildOption('asset-manifest-dirname') + '/'
             ),
             filename: buildOption('version') + '-assets-manifest.json',
           }),
@@ -66,14 +66,14 @@ const createPluginsConfig = buildOption => {
               },
               ...replaceVersionInPath(
                 buildOption('copy-plugin-patterns', { merge: true }),
-                buildOption('version'),
+                buildOption('version')
               ),
               ...(buildOption('create-dll-bundles')
                 ? [
                     {
                       from: path.join(
                         __dirname,
-                        '../../webpack-dev-compiler/dll-bundles/vendor.dll.js',
+                        '../../webpack-dev-compiler/dll-bundles/vendor.dll.js'
                       ),
                       to:
                         '../' +
@@ -87,7 +87,7 @@ const createPluginsConfig = buildOption => {
                   ]
                 : []),
             ],
-            { ignore: ['readme.md'] },
+            { ignore: ['readme.md'] }
           )
         : null,
 
@@ -157,7 +157,7 @@ const createPluginsConfig = buildOption => {
                 webOutputDirname: JSON.stringify(buildOption('web-output-dirname')),
                 nodeOutputDirname: JSON.stringify(buildOption('node-output-dirname')),
                 versioningPath: JSON.stringify(
-                  '/' + buildOption('versioning-dirname') + '/' + buildOption('version'),
+                  '/' + buildOption('versioning-dirname') + '/' + buildOption('version')
                 ),
                 assetPath: JSON.stringify('/' + buildOption('assets-dirname')),
                 assetsDirname: JSON.stringify(buildOption('assets-dirname')),
@@ -169,20 +169,20 @@ const createPluginsConfig = buildOption => {
                     buildOption('asset-manifest-dirname') +
                     '/' +
                     buildOption('version') +
-                    '-assets-manifest.json',
+                    '-assets-manifest.json'
                 ),
                 useDllBundles: buildOption('create-dll-bundles'),
                 stylesheetFilename: JSON.stringify(buildOption('extract-stylesheet-name')),
                 webEntryFilename: JSON.stringify('client.js'),
                 isNode: isTargetNode,
               },
-              buildOption('define-constants', { merge: true }),
-            ),
+              buildOption('define-constants', { merge: true })
+            )
           ),
           buildOption('force-environment-production')
             ? { 'process.env': { NODE_ENV: JSON.stringify('production') } }
-            : {},
-        ),
+            : {}
+        )
       ),
       new LodashModuleReplacementPlugin(),
     ].filter(plugin => plugin !== null),

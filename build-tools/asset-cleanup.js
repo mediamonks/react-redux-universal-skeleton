@@ -77,7 +77,7 @@ if (typeof argv.n === 'undefined' && !argv.b && !argv.a) {
       .filter(parsed => {
         if (isNaN(parsed)) {
           debug(
-            'warning: ignored manifest file because we were unable to parse the version from the filename',
+            'warning: ignored manifest file because we were unable to parse the version from the filename'
           );
           return false;
         }
@@ -87,12 +87,12 @@ if (typeof argv.n === 'undefined' && !argv.b && !argv.a) {
       .sort((a, b) => b - a)
       .map((parsed, index) => {
         const manifest = JSON.parse(
-          fs.readFileSync(`./manifests/${parsed}-webpack-manifest.json`, { encoding: 'utf8' }),
+          fs.readFileSync(`./manifests/${parsed}-webpack-manifest.json`, { encoding: 'utf8' })
         );
         // get array of all asset files in this version
         const assets = Object.keys(manifest).reduce(
           (result, asset) => [...result, manifest[asset]],
-          [],
+          []
         );
 
         return {
@@ -117,7 +117,7 @@ if (typeof argv.n === 'undefined' && !argv.b && !argv.a) {
       debug('versions found:  (\u2713=keep \u2716=remove)');
     }
     versions.forEach(({ date, name, keep }) =>
-      debug(`${keep ? '\u2713' : '\u2716'} ${name} ${date.format('dddd, MMMM Do YYYY, hh:mm')}`),
+      debug(`${keep ? '\u2713' : '\u2716'} ${name} ${date.format('dddd, MMMM Do YYYY, hh:mm')}`)
     );
 
     const assets = assetFiles.filter(filePath => !ASSET_IGNORE.includes(filePath)).map(filePath => {
@@ -229,7 +229,7 @@ if (typeof argv.n === 'undefined' && !argv.b && !argv.a) {
         `remove ${cleanedStaticFolders.length} versioned static asset folder${cleanedStaticFolders.length ===
         1
           ? ''
-          : 's'}`,
+          : 's'}`
       );
     } else {
       debug(`${cleanCount} asset${cleanCount === 1 ? '' : 's'} removed`);
@@ -238,7 +238,7 @@ if (typeof argv.n === 'undefined' && !argv.b && !argv.a) {
         `${cleanedStaticFolders.length} versioned static asset folder${cleanedStaticFolders.length ===
         1
           ? ''
-          : 's'} removed`,
+          : 's'} removed`
       );
     }
     debug('\n\n');

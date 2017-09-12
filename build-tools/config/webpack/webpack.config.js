@@ -10,28 +10,28 @@ function createConfiguration(buildOptionsManager) {
       'enable-browser-hot-reload': true,
       'watch-mode': false,
     },
-    'Configuration flag "enable-browser-hot-reload" can only be used in combination with "watch-mode"',
+    'Configuration flag "enable-browser-hot-reload" can only be used in combination with "watch-mode"'
   );
   buildOptionsManager.forbidOptionCombination(
     {
       'fail-on-error': true,
       'watch-mode': true,
     },
-    'Configuration flag "fail-on-error" should not be used in combination with "watch-mode"',
+    'Configuration flag "fail-on-error" should not be used in combination with "watch-mode"'
   );
   buildOptionsManager.forbidOptionCombination(
     {
       'enable-uglify': true,
       target: 'node',
     },
-    'Configuration flag "enable-uglify" should not be used on target === "node"',
+    'Configuration flag "enable-uglify" should not be used on target === "node"'
   );
   buildOptionsManager.forbidOptionCombination(
     {
       'force-environment-production': true,
       target: 'node',
     },
-    'Configuration flag "force-environment-production" should not be used on target === "node"',
+    'Configuration flag "force-environment-production" should not be used on target === "node"'
   );
 
   const config = Object.assign(
@@ -50,7 +50,7 @@ function createConfiguration(buildOptionsManager) {
     require('./webpack.config.resolve')(buildOption),
     require('./webpack.config.externals')(buildOption),
     require('./webpack.config.module')(buildOption),
-    require('./webpack.config.plugins')(buildOption),
+    require('./webpack.config.plugins')(buildOption)
   );
 
   return config;

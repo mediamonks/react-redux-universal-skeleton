@@ -14,7 +14,7 @@ if (namespaces.indexOf(NAMESPACE_TO_ADD) === -1) {
   console.log(
     'Could not find "' +
       NAMESPACE_TO_ADD +
-      '" in DEBUG environment variable. \nPatching it manually for development.\n',
+      '" in DEBUG environment variable. \nPatching it manually for development.\n'
   );
   namespaces.push(NAMESPACE_TO_ADD);
   process.env['DEBUG'] = namespaces.join(',');

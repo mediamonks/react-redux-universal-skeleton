@@ -13,14 +13,14 @@ const createEntryConfig = buildOption => {
           [buildOption('source-entry', { isPath: true })],
           !isTargetNode && buildOption('enable-browser-hot-reload')
             ? ['webpack-hot-middleware/client']
-            : [],
+            : []
         ),
       },
       isTargetNode
         ? {
             'asset-cleanup': 'build-tools/asset-cleanup.js',
           }
-        : {},
+        : {}
     ),
   };
 };

@@ -17,7 +17,7 @@ const argv = require('yargs').argv;
 if (!argv['legacy-node'] && nodeMajorVersion < 6) {
   throw new Error(
     'You need at least NodeJS v6.0 to run this dev server. Current NodeJS version is ' +
-      nodeMajorVersion,
+      nodeMajorVersion
   );
 }
 

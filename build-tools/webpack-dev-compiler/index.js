@@ -91,7 +91,7 @@ WebpackDevCompiler.prototype.checkOutputWebToDisk = function() {
     };
     debug(
       'output-dev-to-disk option enabled. Overriding the following options: ' +
-        JSON.stringify(overrideOptions, null, '  '),
+        JSON.stringify(overrideOptions, null, '  ')
     );
     this.webBuildOptionsManager.injectValues(overrideOptions);
     this.nodeBuildOptionsManager.injectValues(overrideOptions);
@@ -183,7 +183,7 @@ WebpackDevCompiler.prototype.startNodeBuild = function() {
             resolve();
           }
         }
-      },
+      }
     );
   });
 };
@@ -223,7 +223,7 @@ WebpackDevCompiler.prototype.startWebBuildToDisk = function() {
             resolve();
           }
         }
-      },
+      }
     );
   });
 };
