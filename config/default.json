@@ -1,6 +1,8 @@
 {
 	"_strip_": [
-		"raven.nodejs"
+		"raven.nodejs",
+    "cookie.signSecret",
+    "cookie.encryptSecret"
 	],
 	"api": {
 		"host": "",
